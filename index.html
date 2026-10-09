@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="企业供应管理：单个商品二维码与批量二维码下载交互原型">
+  <title>供应管理｜HTML 交互原型 v3.3</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css?v=3.3.0">
+  <link rel="stylesheet" href="qr.css?v=3.3.3">
+</head>
+<body>
+  <div id="app"></div>
+
+  <div class="prototype-switcher">
+    <button class="switcher-trigger" type="button" data-action="toggle-switcher" aria-expanded="false">
+      <span>原型导航</span><span aria-hidden="true">⌄</span>
+    </button>
+    <div class="switcher-panel" id="switcherPanel" aria-hidden="true"></div>
+  </div>
+
+  <div class="modal-mask" id="modalMask" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header class="modal-head">
+        <h2 id="modalTitle"></h2>
+        <button class="icon-button" type="button" data-action="close-modal" aria-label="关闭弹窗">×</button>
+      </header>
+      <div class="modal-body" id="modalBody"></div>
+      <footer class="modal-foot" id="modalFoot"></footer>
+    </section>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="vendor/qrcode.js"></script>
+  <script src="vendor/jszip.min.js"></script>
+  <script src="app.js?v=3.3.0"></script>
+  <script src="qr.js?v=3.3.3"></script>
+</body>
+</html>
